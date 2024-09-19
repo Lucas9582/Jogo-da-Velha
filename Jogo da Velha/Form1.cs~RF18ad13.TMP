@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Jogo_da_Velha
+{
+    public partial class JogoDaVelha : Form
+    {
+        public JogoDaVelha()
+        {
+            InitializeComponent();
+        }
+
+        string[,] mat = new string[3, 3];
+        string jogador = "O";
+        int rodadas = 1;
+
+        private void JogoDaVelha_Load_1(object sender, EventArgs e)
+        {
+            AlteraJogador();
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(0); j++)
+                {
+                    lblJogo.Text += mat[i, j] + " | ";
+                }
+                lblJogo.Text += "\n";
+            }
+        }
+
+        public void mostrarTab()
+        {
+            lblJogo.Text = "";
+            
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(0); j++)
+                {
+                    lblJogo.Text += mat[i, j] + " | ";
+                }
+                lblJogo.Text += "\n";
+            }
+        }
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
+            if (rodadas == 1)
+            {
+                for (int i = 0; i < mat.GetLength(0); i++)
+                {
+                    for (int j = 0; j < mat.GetLength(0); j++)
+                    {
+                        mat[i, j] = "";
+                    }
+                }
+            }
+
+            
+            int linha = int.Parse(txtLinha.Text);
+            int coluna = int.Parse(txtColuna.Text);
+
+            if (rodadas < 9) { 
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                for (int j = 0; j < mat.GetLength(0); j++)
+                {
+                    if (mat[linha,coluna] == "")
+                    {
+                        mat[linha, coluna] = jogador;
+                            lblJogo.Text = "";
+                    }
+                }
+            }
+            }
+
+
+            mostrarTab();
+
+            if ((mat[0, 0] == mat[0, 1] && mat[0, 1] == mat[0, 2]) || (mat[1, 0] == mat[1, 1] && mat[1, 1] == mat[1, 2]) || (mat[2, 0] == mat[2, 1] && mat[2, 1] == mat[2, 2]))
+            {       
+                    MessageBox.Show("O jogador " + jogador + " é o vencedor!");
+
+            }
+           
+            AlteraJogador();
+
+            rodadas++;
+
+            
+        }
+
+        private void AlteraJogador()
+        {
+            if(jogador == "X")
+            {
+                jogador = "O";
+            }
+            else
+            {
+                jogador = "X";
+            }
+            lblVez.Text = jogador;
+
+        }
+    }
+}

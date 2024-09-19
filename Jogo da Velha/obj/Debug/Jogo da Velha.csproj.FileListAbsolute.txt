@@ -1,0 +1,10 @@
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\bin\Debug\Jogo da Velha.exe.config
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\bin\Debug\Jogo da Velha.exe
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\bin\Debug\Jogo da Velha.pdb
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo da Velha.csproj.AssemblyReference.cache
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo_da_Velha.JogoDaVelha.resources
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo_da_Velha.Properties.Resources.resources
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo da Velha.csproj.GenerateResource.cache
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo da Velha.csproj.CoreCompileInputs.cache
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo da Velha.exe
+H:\Visual Studio 2022\Projects\Jogo da Velha\Jogo da Velha\obj\Debug\Jogo da Velha.pdb
